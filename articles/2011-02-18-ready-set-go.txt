@@ -4,7 +4,7 @@ date: 2011/02/18
 
 Running Code. So here it finally is, a place for myself. A place to get myself to write texts longer than 140 characters.
 An effort to get myself to use the commandline including git & vim more often. 
-I don't know where this is heading to: I imagine this to be a supplement to [www.foomoo.de](www.foomoo.de "my personal website") - stay tuned, all-new somewhen soon.
+I don't know where this is heading to: I imagine this to be a supplement to [www.foomoo.de](http://www.foomoo.de "my personal website") - stay tuned, all-new somewhen soon.
 If you feel like, chim in via Disqus. Thanks to toto by @cloudhead for making this such a nobrainer. Oh, and @heroku - you're great.
 
 So what is the name *Running Code* about? Last year during a lecture in University our Professor introduced us to the concepts of the interweb, its technical foundation and best-effort princicple.
