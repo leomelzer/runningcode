@@ -1,17 +1,52 @@
-<!doctype html>
-<html>
+<!DOCTYPE html> 
+<html lang="en">
   <head>
     <meta name="charset" content="utf-8" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script>
+	(function() {
+      var app = {
+		// by dustin diaz, twitter.com/javascripts/widgets/widget.js
+        at: function(tweet) {
+          return tweet.replace(/\B[@]([a-zA-Z0-9_]{1,20})/g, function(m, username) {
+            return '@<a target="_blank" class="twtr-atreply" href="http://twitter.com/' + username + '">' + username + '</a>';
+           });
+        }
+      }
+      jQuery(function($) {
+	    $("section.content").html(function(i, old) {
+		  return app.at(old);
+	    });
+		$("article.profile div").hide();
+		$("article.profile").hover(
+	      function() {
+			$(this).children().eq(1).slideDown("slow");
+		  },
+		  function() {
+			$(this).children().eq(1).slideUp("slow");
+		  }
+		);
+      });
+    })();
+    </script>
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
     <title><%= title %></title>
   </head>
   <body>
+	<article class="profile">
+	  <p class="trigger">What's this?</p>
+	  <div>
+		<img src="http://www.gravatar.com/avatar/5d98dd6c06dc8b78e06396b3180c310a?s=128" alt="Gravatar: Leonhard Melzer" />
+		<p>This is <strong>Running Code</strong>, the personal blog of Leonhard Melzer. It's a supplement to <a href="http://foomoo.de" title="personal website of Leonhard Melzer">foomoo.de</a>, so you should check this out as well. You're more than welcome to leave comments or drop me a line directly: <a href="mailto:leonhard.melzer@gmail.com">leonhard.melzer@gmail.com</a>.</p>
+	  </div>
+	</article>
     <section>
       <%= yield %> 
     </section>
     <footer>
-      powered by <a href="http://cloudhead.io/toto">toto</a>
+      powered by <a href="http://cloudhead.io/toto">toto</a> |
+      content is <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>
     </footer>
   </body>
 </html>

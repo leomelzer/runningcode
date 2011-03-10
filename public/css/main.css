@@ -8,8 +8,11 @@ body {
   width: 720px;
 
 }
-header, footer, section, article {
+header, footer, section, article, aside {
 	display: block;
+}
+#articles {
+	margin-top: 50px;
 }
 #content {
 }
@@ -34,13 +37,18 @@ header, footer, section, article {
 }
 a {
   color: #b83000;
+  text-decoration: underline;
+}
+a img {
+	border-width: 0;
+	vertical-align: text-bottom;
 }
 h1 a {
   color: black;
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 body > header > h1 {
 	border-left: 30px solid black;
@@ -104,7 +112,48 @@ blockquote {
 body > footer {
   text-align: left;
   margin-left: 10px;
-	font-style: italic;
-  font-size: 18px;
+  font-style: italic;
+  font-size: 16px;
   color: #888;
+}
+p.home {
+	position: relative;
+	left: -30px;
+}
+p.home a {
+	text-decoration: none;
+	font-style: italic;
+	font-size: 24px;
+	color: #ccc;
+}
+p.home a:hover {
+	color: #222;
+}
+article.profile {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	box-shadow: 0px 0px 15px #424242;
+	-moz-box-shadow: 0px 0px 15px #424242;
+	-webkit-box-shadow: 0px 0px 15px #424242;
+	width: 400px;
+	padding: 10px;
+	background-color: #057D9F;
+	color: #fff;
+	overflow: hidden;
+}
+article.profile p {
+	margin: 0;
+}
+article.profile p.trigger {
+	font-weight: bold;
+	cursor: help;
+}
+article.profile img {
+	float: left;
+	margin: 5px 10px 5px 0;
+	border: 5px solid #FFD573;
+}
+article.profile a {
+	color: #FFB300;
 }
