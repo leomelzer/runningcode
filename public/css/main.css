@@ -1,12 +1,11 @@
-html { margin: 20px }
 body {
-  margin: 0 auto;
+  margin: 20px auto;
   font-family: 'Baskerville', Georgia, Times, serif;
   font-size: 20px;
   line-height: 30px;
   padding: 15px;
   width: 720px;
-
+  position: relative;
 }
 header, footer, section, article, aside {
 	display: block;
@@ -67,7 +66,7 @@ body > header > h1 {
 	margin-bottom: 0;
 }
 .post {
-	margin-bottom: 30px;
+	margin: 30px 0;
 }
 .post:last-child {
   margin-bottom: 10px;
@@ -116,23 +115,23 @@ body > footer {
   font-size: 16px;
   color: #888;
 }
-p.home {
+a.home {
 	position: relative;
 	left: -30px;
 }
-p.home a {
+a.home {
 	text-decoration: none;
 	font-style: italic;
 	font-size: 24px;
 	color: #ccc;
 }
-p.home a:hover {
+a.home:hover {
 	color: #222;
 }
 article.profile {
 	position: absolute;
-	right: 10px;
-	top: 10px;
+	right: -30px;
+	top: 0;
 	box-shadow: 0px 0px 15px #424242;
 	-moz-box-shadow: 0px 0px 15px #424242;
 	-webkit-box-shadow: 0px 0px 15px #424242;

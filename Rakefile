@@ -20,6 +20,7 @@ task :new do
       file.write article
     end
     toto "an article was created for you at #{path}."
+    system "$EDITOR #{path}"
   else
     toto "I can't create the article, #{path} already exists."
   end
@@ -29,6 +30,7 @@ desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
   `git push heroku master`
+  `git push origin master` # also push to github
 end
 
 def toto msg
