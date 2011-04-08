@@ -6,6 +6,7 @@ body {
   padding: 15px;
   width: 720px;
   position: relative;
+  color: #333;
 }
 header, footer, section, article, aside {
 	display: block;
@@ -27,6 +28,14 @@ header, footer, section, article, aside {
 }
 #path {
 	color: #b53131;
+}
+#archives {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid #ccc;
+}
+#archives h1 {
+  font-size: 20px;
 }
 .date {
   font-style: italic;
@@ -152,4 +161,12 @@ article.profile img {
 }
 article.profile a {
 	color: #FFB300;
+}
+a.hero {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+a.hero img {
+  border: 3px solid #ccc;
 }
